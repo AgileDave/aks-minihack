@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: nginx-pvc
+  namespace: hack
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: hack-files
+  resources:
+    requests:
+      storage: 5Gi

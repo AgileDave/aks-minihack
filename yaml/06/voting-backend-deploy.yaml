@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: azure-vote-back
+  namespace: voting
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: azure-vote-back
+  template:
+    metadata:
+      labels:
+        app: azure-vote-back
+    spec:
+      nodeSelector:
+        "beta.kubernetes.io/os": linux
+      containers:
+      - name: backend
+        image: agilewaysreg.azurecr.io/demo/redis:6.0.8
+        envFrom:
+          - configMapRef:
+              name: back-end-cm
+        ports:
+        - containerPort: 6379
+          name: redis
