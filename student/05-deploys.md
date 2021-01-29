@@ -15,10 +15,10 @@ In order to successfully complete this exercise, you should be able to deploy th
 An inventory of items to complete in this exercise:
 
 - Create `voting` namespace
-- Deploy the front-end image (3 replicas)
 - Deploy the back-end image (1 replica)
-- Create a front-end service that fronts traffic to the front-end deployment
 - Create a back-end service that fronts traffic to the back-end deployment
+- Deploy the front-end image (3 replicas)
+- Create a front-end service that fronts traffic to the front-end deployment
 
 ## Background
 
