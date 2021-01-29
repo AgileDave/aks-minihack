@@ -51,3 +51,5 @@ A service can be created via the command prompt using `kubectl`, as such:
 ```
 kubectl expose deploy azure-vote-front -n voting --ports 80
 ```
+
+You can also create a service via YAML - check out the [kubernetes docs](https://kubernetes.io/docs/concepts/services-networking/service/) for info about services. There's also samples of service YAML definitions, too.
